@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { createTheme } from '@mui/material/styles';
+import { GREEN_SHADES } from '../../utilities/globalStyles';
 
 export const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ export const LogoContainer = styled.div`
 
 export const FlexRow = styled.div`
   display: flex;
-  color: #34b38a;
+  color: ${GREEN_SHADES[500]};
 `;
 
 export const logoTheme = createTheme({
