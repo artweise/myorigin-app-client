@@ -1,22 +1,24 @@
 import styled from 'styled-components';
 import { createTheme } from '@mui/material/styles';
-import { GREEN_SHADES } from '../../utilities/globalStyles';
+import { GREEN_SHADES, PURPLE_SHADES } from '../../utilities/globalStyles';
 
-export const Container = styled.div`
+export const PageContainer = styled.div`
+  margin-top: 336px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 20%;
-  justify-content: space-around;
-  margin: -120px 0px -30px;
-  padding-right: 50px;
 `;
 
 export const FlexRow = styled.div`
@@ -33,5 +35,16 @@ export const logoTheme = createTheme({
 export const sloganTheme = createTheme({
   typography: {
     fontFamily: ['Dancing Script'].join(','),
+  },
+});
+
+export const buttonTheme = createTheme({
+  palette: {
+    primary: {
+      main: GREEN_SHADES[600],
+    },
+    secondary: {
+      main: PURPLE_SHADES[700],
+    },
   },
 });
