@@ -1,53 +1,55 @@
-import React from 'react';
 import { Typography } from '@mui/material';
-import { Container, LogoContainer, FlexRow, logoTheme, sloganTheme } from './style';
+import { Link } from 'react-router-dom';
+import {
+  Container,
+  LogoContainer,
+  FlexRow,
+  logoTheme,
+  sloganTheme,
+  buttonTheme,
+  PageContainer,
+} from './style';
 import { ThemeProvider } from '@mui/system';
+import Button from '../../components/AppComponents/Button/Button';
 
 const Home = () => {
   return (
     <>
       <Container>
-        <LogoContainer>
-          <ThemeProvider theme={logoTheme}>
-            <Typography
-              variant='h2'
-              align='center'
-              width='8vw'
-              sx={{ mt: 3, fontWeight: 500 }}
-              gutterBottom
-            >
-              MY
-            </Typography>
-            <img
-              width='100'
-              height='100'
-              src='https://img.icons8.com/carbon-copy/100/deciduous-tree.png'
-              alt='deciduous-tree'
-            />
-            <Typography
-              variant='h2'
-              align='center'
-              width='10vw'
-              sx={{ mt: 3, fontWeight: 500 }}
-              gutterBottom
-            >
-              ORIGIN
-            </Typography>
-          </ThemeProvider>
-        </LogoContainer>
-        <FlexRow>
-          <ThemeProvider theme={sloganTheme}>
-            <Typography
-              variant='h4'
-              align='center'
-              width='50vw'
-              sx={{ mt: 5, ml: 8, fontWeight: 900 }}
-              gutterBottom
-            >
-              Every Leaf Tells a Story
-            </Typography>
-          </ThemeProvider>
-        </FlexRow>
+        <PageContainer>
+          <LogoContainer>
+            <ThemeProvider theme={logoTheme}>
+              <Typography variant='h2' sx={{ fontWeight: 500 }}>
+                MY
+              </Typography>
+              <img
+                width='100'
+                height='100'
+                src='https://img.icons8.com/carbon-copy/100/deciduous-tree.png'
+                alt='deciduous-tree'
+              />
+              <Typography variant='h2' sx={{ fontWeight: 500 }}>
+                ORIGIN
+              </Typography>
+            </ThemeProvider>
+          </LogoContainer>
+          <FlexRow>
+            <ThemeProvider theme={sloganTheme}>
+              <Typography variant='h4' sx={{ mt: 2, fontWeight: 900 }} gutterBottom>
+                Every Leaf Tells a Story
+              </Typography>
+            </ThemeProvider>
+          </FlexRow>
+          <div style={{ marginTop: '0.5rem' }}>
+            <ThemeProvider theme={buttonTheme}>
+              <FlexRow>
+                <Link to='/familytrees'>
+                  <Button sx={{ mt: 6, fontWeight: 500, color: 'secondary' }}>Try now</Button>
+                </Link>
+              </FlexRow>
+            </ThemeProvider>
+          </div>
+        </PageContainer>
       </Container>
     </>
   );
