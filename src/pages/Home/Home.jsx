@@ -1,13 +1,13 @@
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {
+  PageContainer,
   Container,
   LogoContainer,
   FlexRow,
   logoTheme,
   sloganTheme,
   buttonTheme,
-  PageContainer,
 } from './style';
 import { ThemeProvider } from '@mui/system';
 import Button from '../../components/AppComponents/Button/Button';
